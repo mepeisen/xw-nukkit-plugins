@@ -1,0 +1,39 @@
+#name, main, version and api are required
+name: xw-web
+main: eu.xworlds.nukkit.web.WebserverPlugin
+#remember version and api is string, don't write it like this: 1.0.0, or there will be an exception
+version: "0.0.1"
+api: ["1.0.0"]
+
+load: POSTWORLD
+author: xWorlds.eu
+description: Plugin to support small web servers
+website: https://github.com/mepeisen/xw-nukkit-plugins/xw-nukkit-web
+commands:
+  xwebstatus:
+    description: Display status of web server
+    usage: "/xwebstatus"
+    permission: xworlds.command.webstatus
+  xwebstart:
+    description: Start the internal web server
+    usage: "/xwebstart"
+    permission: xworlds.command.webedit
+  xwebstop:
+    description: Stop the internal web server
+    usage: "/xwebstop"
+    permission: xworlds.command.webedit
+  xwebmt:
+    description: Temporary maintenance (no restart required)
+    usage: "/xwebmt <on|off>"
+    permission: xworlds.command.webedit
+  xwebport:
+    description: Change port temporary (requires cmd xwebstop/xwebstart)
+    usage: "/xwebport <port>"
+    permission: xworlds.command.webedit
+permissions:
+  xworlds.command.webstatus:
+    description: "Allow user to query the web server status"
+    default: op
+  xworlds.command.webedit:
+    description: "Change settings of internal web server"
+    default: op
