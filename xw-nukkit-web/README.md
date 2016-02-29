@@ -3,10 +3,12 @@ Embedded webserver for nukkit. Internal name: "xw-web".
 
 # current version
 release: NONE
+
 snapshot: 0.0.1-SNAPSHOT
 
 # maven identification
 group-id: eu.xworlds.nukkit
+
 artifact-id: xw-nukkit-web
 
 # use/download
@@ -27,6 +29,7 @@ It will give you some json output of general server information.
 
 # built your own web-extension
 Add a maven dependency to this plugin. Ensure that it is not contained in your resulting jar file.
+
 Within your plugin main class in method "onEnable" add the following code:
 
     ((WebserverPlugin)getServer().getPluginManager().getPlugin("xw-web")).registerFactory(this, new MyHandlerFactory());
